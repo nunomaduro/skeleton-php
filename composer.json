@@ -3,10 +3,6 @@
     "description": "A skeleton repository for my packages",
     "keywords": ["php", "skeleton", "package"],
     "license": "MIT",
-    "support": {
-        "issues": "https://github.com/nunomaduro/skeleton-php/issues",
-        "source": "https://github.com/nunomaduro/skeleton-php"
-    },
     "authors": [
         {
             "name": "Nuno Maduro",

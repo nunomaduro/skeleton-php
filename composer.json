@@ -1,0 +1,45 @@
+{
+    "name": "nunomaduro/skeleton-php",
+    "description": "A skeleton repository for my packages",
+    "keywords": ["php", "skeleton", "package"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/nunomaduro/skeleton-php/issues",
+        "source": "https://github.com/nunomaduro/skeleton-php"
+    },
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.1"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "NunoMaduro\\SkeletonPhp\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                // "NunoMaduro\\SkeletonPhp\\SkeletonPhpServiceProvider"
+            ]
+        }
+    }
+}

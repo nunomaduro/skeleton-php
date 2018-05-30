@@ -20,4 +20,13 @@ use NunoMaduro\SkeletonPhp\Contracts\ExampleContract;
  */
 final class Example implements ExampleContract
 {
+    /**
+     * Performs foo and returns bar.
+     *
+     * @return string With the bar.
+     */
+    public function foo(): string
+    {
+        return 'bar';
+    }
 }

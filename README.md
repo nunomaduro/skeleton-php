@@ -19,10 +19,10 @@ skeleton-php was created by, and is maintained by [Nuno Maduro](https://github.c
 
 > **Requires [PHP 7.1.3+](https://php.net/releases/)**
 
-Require skeleton-php using [Composer](https://getcomposer.org):
+Create your package using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project nunomaduro/skeleton-php
+composer create-project nunomaduro/skeleton-php --prefer-source PackageName
 ```
 
 ## Contributing

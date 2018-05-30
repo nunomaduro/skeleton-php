@@ -22,7 +22,7 @@ skeleton-php was created by, and is maintained by [Nuno Maduro](https://github.c
 Require skeleton-php using [Composer](https://getcomposer.org):
 
 ```bash
-composer create-project nunomaduro/skeleton-php --dev
+composer create-project nunomaduro/skeleton-php
 ```
 
 ## Contributing

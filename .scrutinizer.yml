@@ -8,18 +8,16 @@ filter:
         - tests/*
 
 build:
+    environment:
+        php:
+            version: '7.2'
     nodes:
         analysis:
             tests:
                 override:
                     - php-scrutinizer-run
-    environment:
-        php:
-            version: '7.2'
-    tests:
-        override:
-            -
-                command: 'vendor/bin/phpunit --coverage-clover=coverage.clover'
-                coverage:
-                    file: 'coverage.clover'
-                    format: 'clover'
+                    -
+                        command: 'vendor/bin/phpunit --coverage-clover=coverage.clover'
+                        coverage:
+                            file: 'coverage.clover'
+                            format: 'clover'

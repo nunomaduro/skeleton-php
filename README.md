@@ -7,7 +7,7 @@
   <a href="https://scrutinizer-ci.com/g/nunomaduro/skeleton-php"><img src="https://img.shields.io/scrutinizer/g/nunomaduro/skeleton-php.svg" alt="Quality Score"></img></a>
   <a href="https://scrutinizer-ci.com/g/nunomaduro/skeleton-php"><img src="https://img.shields.io/scrutinizer/coverage/g/nunomaduro/skeleton-php.svg" alt="Coverage"></img></a>
   <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img src="https://poser.pugx.org/nunomaduro/skeleton-php/d/total.svg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img src="https://poser.pugx.org/nunomaduro/skeleton-php/v/master.svg" alt="Latest master Version"></a>
+  <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img src="https://poser.pugx.org/nunomaduro/skeleton-php/v/stable.svg" alt="Latest Version"></a>
   <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img src="https://poser.pugx.org/nunomaduro/skeleton-php/license.svg" alt="License"></a>
 </p>
 

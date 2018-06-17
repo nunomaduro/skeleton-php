@@ -14,4 +14,5 @@ before_script:
     - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
 
 script:
+    - vendor/bin/phpstan analyse -l 7 src
     - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml

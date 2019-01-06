@@ -8,14 +8,12 @@ use NunoMaduro\SkeletonPhp\Contracts\ExampleContract;
 
 class ExampleTest extends TestCase
 {
-    /** @test */
-    public function it_respects_is_contract(): void
+    public function testContract(): void
     {
         $this->assertInstanceOf(ExampleContract::class, new Example());
     }
 
-    /** @test */
-    public function it_performs_foo(): void
+    public function testFoo(): void
     {
         $this->assertEquals((new Example())->foo(), 'bar');
     }

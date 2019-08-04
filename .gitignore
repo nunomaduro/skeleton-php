@@ -2,4 +2,3 @@
 .idea/codeStyleSettings.xml
 composer.lock
 /vendor/
-coverage.xml

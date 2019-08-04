@@ -3,7 +3,6 @@ language: php
 sudo: false
 
 php:
-  - 7.1
   - 7.2
   - 7.3
   - nightly
@@ -18,5 +17,4 @@ before_script:
     - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
 
 script:
-    - vendor/bin/phpstan analyse -l max src
-    - vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml
+    - composer test

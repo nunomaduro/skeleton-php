@@ -2,3 +2,4 @@
 .idea/codeStyleSettings.xml
 composer.lock
 /vendor/
+.phpunit.result.cache

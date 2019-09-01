@@ -13,11 +13,11 @@
         "php": "^7.2"
     },
     "require-dev": {
-        "nunomaduro/pest": "dev-master",
+        "nunomaduro/pest": "^0.1",
         "friendsofphp/php-cs-fixer": "^2.15",
         "localheinz/phpstan-rules": "^0.10.0",
-        "nunomaduro/phpinsights": "^1.7",
-        "phpstan/phpstan": "^0.11.12",
+        "nunomaduro/phpinsights": "^1.8.1",
+        "phpstan/phpstan": "^0.11.15",
         "phpstan/phpstan-strict-rules": "^0.11.1",
         "roave/no-floaters": "^1.1",
         "symfony/var-dumper": "^4.3.3",

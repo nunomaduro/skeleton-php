@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use NunoMaduro\SkeletonPhp\Example;
 use NunoMaduro\SkeletonPhp\Contracts\ExampleContract;
+use NunoMaduro\SkeletonPhp\Example;
 
 test('contract', function (): void {
     assertInstanceOf(ExampleContract::class, new Example());

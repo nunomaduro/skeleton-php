@@ -14,14 +14,11 @@
     },
     "require-dev": {
         "nunomaduro/pest": "^0.1",
-        "friendsofphp/php-cs-fixer": "^2.15",
-        "localheinz/phpstan-rules": "^0.10.0",
-        "nunomaduro/phpinsights": "^1.8.1",
-        "phpstan/phpstan": "^0.11.15",
-        "phpstan/phpstan-strict-rules": "^0.11.1",
-        "roave/no-floaters": "^1.1",
-        "symfony/var-dumper": "^4.3.3",
-        "thecodingmachine/phpstan-strict-rules": "^0.11.2"
+        "ergebnis/phpstan-rules": "^0.14.2",
+        "phpstan/phpstan": "^0.12",
+        "phpstan/phpstan-strict-rules": "^0.12",
+        "symfony/var-dumper": "^5.0.2",
+        "thecodingmachine/phpstan-strict-rules": "^0.12"
     },
     "autoload-dev": {
         "psr-4": {
@@ -39,23 +36,12 @@
         "sort-packages": true,
         "preferred-install": "dist"
     },
-        "scripts": {
-        "phpstan":"phpstan analyse --ansi",
-        "ecs": "ecs check src --ansi --config vendor/symplify/easy-coding-standard/config/set/clean-code.yaml",
-        "pest": "pest",
-        "insights": "phpinsights analyse --ansi -v --no-interaction --min-quality=100 --min-architecture=100 --min-style=100 --disable-security-check",
-        "tests": [
-            "@ecs",
-            "@phpstan",
-            "@pest",
-            "@insights"
+    "scripts": {
+        "test:types":"phpstan analyse --ansi",
+        "test:unit": "pest",
+        "test": [
+            "@test:types",
+            "@test:unit"
         ]
-    },
-    "scripts-descriptions": {
-        "ecs": "Run the ecs tests.",
-        "phpstan": "Run the phpstan tests.",
-        "pest": "Run the pest tests against himself.",
-        "insights": "Run the phpinsights tests.",
-        "tests": "Run all tests."
     }
 }

@@ -6,6 +6,9 @@ namespace NunoMaduro\SkeletonPhp;
 
 use NunoMaduro\SkeletonPhp\Contracts\ExampleContract;
 
+/**
+ * @internal
+ */
 final class Example implements ExampleContract
 {
     public function foo(): string

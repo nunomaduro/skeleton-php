@@ -11,7 +11,7 @@
 ------
 This package provides a wonderful **PHP Skeleton** to start building your next package idea.
 
-> **Requires [PHP 7.1.3+](https://php.net/releases/)**
+> **Requires [PHP 7.3.0+](https://php.net/releases/)**
 
 ⚡️ Create your package using [Composer](https://getcomposer.org):
 

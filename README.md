@@ -9,7 +9,7 @@
 </p>
 
 ------
-This package provides a wonderful **PHP skeleton** to start building your next package idea.
+This package provides a wonderful **PHP Skeleton** to start building your next package idea.
 
 > **Requires [PHP 7.1.3+](https://php.net/releases/)**
 

@@ -19,7 +19,7 @@ This package provides a wonderful **PHP Skeleton** to start building your next p
 composer create-project nunomaduro/skeleton-php --prefer-source PackageName
 ```
 
-🧹 Lint, and keep a modern codebase with **PHP CS Fixer** & **Rector**:
+🧹 Keep a modern codebase with **PHP CS Fixer** & **Rector**:
 ```bash
 composer lint
 ```

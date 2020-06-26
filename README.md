@@ -9,32 +9,32 @@
 </p>
 
 ------
-**Skeleton PHP** is an skeleton for php packages.
+This package provides a wonderful **PHP skeleton** to start building your next package idea.
 
 > **Requires [PHP 7.1.3+](https://php.net/releases/)**
 
-Create your package using [Composer](https://getcomposer.org):
+⚡️ Create your package using [Composer](https://getcomposer.org):
 
 ```bash
 composer create-project nunomaduro/skeleton-php --prefer-source PackageName
 ```
 
-Lint your code using:
+🧹 Lint the code using **PHP CS Fixer**:
 ```bash
 composer lint
 ```
 
-Check your types using:
+⚗️ Run static analysis using **PHPStan**:
 ```bash
 composer test:types
 ```
 
-Run unit tests using:
+✅ Run unit tests using **PEST**
 ```bash
 composer test:unit
 ```
 
-Run the entire test suite:
+🚀 Run the entire test suite:
 ```bash
 composer test
 ```

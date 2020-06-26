@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace NunoMaduro\SkeletonPhp;
 
-use NunoMaduro\SkeletonPhp\Contracts\ExampleContract;
-
 /**
  * @internal
  */
-final class Example implements ExampleContract
+final class Example
 {
     public function foo(): string
     {

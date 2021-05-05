@@ -3,6 +3,4 @@ parameters:
     paths:
         - src
 
-    checkMissingIterableValueType: true
-    checkGenericClassInNonGenericObjectType: false
     reportUnmatchedIgnoredErrors: true

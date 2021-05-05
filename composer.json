@@ -10,13 +10,13 @@
         }
     ],
     "require": {
-        "php": "^7.4"
+        "php": "^8.0"
     },
     "require-dev": {
-        "pestphp/pest": "^0.3.8",
-        "friendsofphp/php-cs-fixer": "^2.16.4",
-        "phpstan/phpstan": "^0.12.48",
-        "symfony/var-dumper": "^5.2.0"
+        "pestphp/pest": "^1.1.0",
+        "friendsofphp/php-cs-fixer": "^3.0.0",
+        "phpstan/phpstan": "^0.12.85",
+        "symfony/var-dumper": "^5.2.7"
     },
     "autoload": {
         "psr-4": {

@@ -2,13 +2,10 @@
 
 use NunoMaduro\SkeletonPhp\Example;
 
-test('foo returns bar', function () {
-    //Arrange
+it('foo', function () {
     $example = new Example();
 
-    //Act
     $result = $example->foo();
 
-    //Assert
     expect($result)->toBe('bar');
 });

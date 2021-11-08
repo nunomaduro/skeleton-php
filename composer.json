@@ -13,10 +13,10 @@
         "php": "^8.0"
     },
     "require-dev": {
-        "pestphp/pest": "^1.1.0",
-        "friendsofphp/php-cs-fixer": "^3.0.0",
-        "phpstan/phpstan": "^0.12.85",
-        "symfony/var-dumper": "^5.2.7"
+        "pestphp/pest": "^1.20.0",
+        "friendsofphp/php-cs-fixer": "^3.2.1",
+        "phpstan/phpstan": "^1.1.1",
+        "symfony/var-dumper": "^5.3.10"
     },
     "autoload": {
         "psr-4": {
@@ -37,7 +37,7 @@
     "scripts": {
         "lint": "php-cs-fixer fix -v",
         "test:lint": "php-cs-fixer fix -v --dry-run",
-        "test:types": "phpstan analyse --ansi --memory-limit=0",
+        "test:types": "phpstan analyse --ansi",
         "test:unit": "pest --colors=always",
         "test": [
             "@test:lint",

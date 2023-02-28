@@ -1,26 +1,25 @@
 {
-    "name": "nunomaduro/skeleton-php",
+    "name": "swow-cloud/skeleton-php",
     "description": "A skeleton repository for my packages",
     "keywords": ["php", "skeleton", "package"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Nuno Maduro",
-            "email": "enunomaduro@gmail.com"
+            "name": "He Ping",
+            "email": "847050412@qq.com"
         }
     ],
     "require": {
-        "php": "^8.2.0"
+        "php": "^8.1.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.4",
         "pestphp/pest": "^2.0.0",
         "phpstan/phpstan": "^1.9.11",
         "symfony/var-dumper": "^6.2.3"
     },
     "autoload": {
         "psr-4": {
-            "NunoMaduro\\SkeletonPhp\\": "src/"
+            "SwowCloud\\SkeletonPhp\\": "src/"
         }
     },
     "autoload-dev": {
@@ -38,12 +37,9 @@
         }
     },
     "scripts": {
-        "lint": "pint -v",
-        "test:lint": "pint --test -v",
         "test:types": "phpstan analyse --ansi",
         "test:unit": "pest --colors=always",
         "test": [
-            "@test:lint",
             "@test:types",
             "@test:unit"
         ]

@@ -24,6 +24,11 @@ composer create-project nunomaduro/skeleton-php --prefer-source PackageName
 composer lint
 ```
 
+✅ Run refactors using **Rector**
+```bash
+composer refacto
+```
+
 ⚗️ Run static analysis using **PHPStan**:
 ```bash
 composer test:types

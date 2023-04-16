@@ -13,10 +13,11 @@
         "php": "^8.2.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.4",
-        "pestphp/pest": "^2.0.0",
-        "phpstan/phpstan": "^1.9.11",
-        "symfony/var-dumper": "^6.2.3"
+        "laravel/pint": "^1.8",
+        "pestphp/pest": "^2.5.0",
+        "phpstan/phpstan": "^1.10.13",
+        "rector/rector": "^0.15.24",
+        "symfony/var-dumper": "^6.2.8"
     },
     "autoload": {
         "psr-4": {
@@ -28,7 +29,7 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
@@ -38,11 +39,14 @@
         }
     },
     "scripts": {
-        "lint": "pint -v",
-        "test:lint": "pint --test -v",
+        "refacto": "rector",
+        "lint": "pint",
+        "test:refacto": "rector --dry-run",
+        "test:lint": "pint --test",
         "test:types": "phpstan analyse --ansi",
         "test:unit": "pest --colors=always",
         "test": [
+            "@test:refacto",
             "@test:lint",
             "@test:types",
             "@test:unit"

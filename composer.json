@@ -1,6 +1,6 @@
 {
     "name": "swow-cloud/skeleton-php",
-    "description": "A skeleton repository for my packages",
+    "description": "A skeleton repository for swow-cloud",
     "keywords": ["php", "skeleton", "package"],
     "license": "MIT",
     "authors": [

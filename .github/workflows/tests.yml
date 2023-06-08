@@ -17,13 +17,7 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: Cache dependencies
-      uses: actions/cache@v1
-      with:
-        path: ~/.composer/cache/files
-        key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
+      uses: actions/checkout@v3
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -31,6 +25,17 @@ jobs:
         php-version: ${{ matrix.php }}
         extensions: dom, mbstring, zip
         coverage: none
+
+    - name: Get Composer cache directory
+      id: composer-cache
+      run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ${{ steps.composer-cache.outputs.dir }}
+        key: dependencies-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
+        restore-keys: dependencies-php-${{ matrix.php }}-composer-
 
     - name: Install Composer dependencies
       run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist

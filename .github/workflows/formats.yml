@@ -25,7 +25,6 @@ jobs:
       with:
         php-version: ${{ matrix.php }}
         extensions: dom, mbstring, zip
-        tools: prestissimo
         coverage: pcov
 
     - name: Get Composer cache directory

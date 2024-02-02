@@ -16,7 +16,7 @@
         "laravel/pint": "^1.13.7",
         "pestphp/pest": "^2.28.1",
         "phpstan/phpstan": "^1.10.50",
-        "rector/rector": "^0.18.13",
+        "rector/rector": "^0.19.5",
         "symfony/var-dumper": "^6.4.0|^7.0.0"
     },
     "autoload": {

@@ -15,6 +15,7 @@
     "require-dev": {
         "laravel/pint": "^1.17.3",
         "pestphp/pest": "^3.0.7",
+        "pestphp/pest-plugin-type-coverage": "^3.0",
         "phpstan/phpstan": "^1.12.4",
         "rector/rector": "^1.2.5",
         "symfony/var-dumper": "^7.1.4"
@@ -44,7 +45,7 @@
         "test:refacto": "rector --dry-run",
         "test:lint": "pint --test",
         "test:types": "phpstan analyse --ansi",
-        "test:unit": "pest --colors=always",
+        "test:unit": "pest --colors=always --coverage --parallel --min=100",
         "test": [
             "@test:refacto",
             "@test:lint",

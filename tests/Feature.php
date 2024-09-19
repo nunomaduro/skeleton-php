@@ -3,7 +3,7 @@
 use NunoMaduro\SkeletonPhp\Example;
 
 it('foo', function (): void {
-    $example = new Example();
+    $example = new Example;
 
     $result = $example->foo();
 

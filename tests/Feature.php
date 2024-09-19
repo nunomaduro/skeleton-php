@@ -2,7 +2,7 @@
 
 use NunoMaduro\SkeletonPhp\Example;
 
-it('foo', function () {
+it('foo', function (): void {
     $example = new Example();
 
     $result = $example->foo();

@@ -1,0 +1,8 @@
+{
+    "preset": "base",
+    "ignore": {
+        "words": [
+            "php"
+        ]
+    }
+}

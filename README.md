@@ -26,7 +26,7 @@ composer lint
 
 ✅ Run refactors using **Rector**
 ```bash
-composer refacto
+composer refactor
 ```
 
 ⚗️ Run static analysis using **PHPStan**:

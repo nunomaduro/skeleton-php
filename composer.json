@@ -10,16 +10,16 @@
         }
     ],
     "require": {
-        "php": "^8.3.0"
+        "php": "^8.4.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.18.1",
-        "peckphp/peck": "^0.1.1",
-        "pestphp/pest": "^3.5.1",
-        "pestphp/pest-plugin-type-coverage": "^3.1",
-        "phpstan/phpstan": "^1.12.7",
-        "rector/rector": "^1.2.8",
-        "symfony/var-dumper": "^7.1.6"
+        "laravel/pint": "^1.22.1",
+        "peckphp/peck": "^0.1.3",
+        "pestphp/pest": "^4.0.0",
+        "pestphp/pest-plugin-type-coverage": "^4.0.0",
+        "phpstan/phpstan": "^2.1.16",
+        "rector/rector": "^2.0.16",
+        "symfony/var-dumper": "^7.2.6"
     },
     "autoload": {
         "psr-4": {
@@ -31,7 +31,7 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
@@ -41,19 +41,21 @@
         }
     },
     "scripts": {
-        "refactor": "rector",
         "lint": "pint",
-        "test:refactor": "rector --dry-run",
-        "test:lint": "pint --test",
+        "refactor": "rector",
+        "test:type-coverage": "pest --type-coverage --exactly=100",
         "test:typos": "peck",
-        "test:types": "phpstan analyse --ansi",
-        "test:unit": "pest --colors=always --coverage --parallel --min=100",
+        "test:lint": "pint --test",
+        "test:unit": "pest --coverage --exactly=100",
+        "test:types": "phpstan",
+        "test:refactor": "rector --dry-run",
         "test": [
-            "@test:refactor",
             "@test:lint",
+            "@test:type-coverage",
             "@test:typos",
+            "@test:unit",
             "@test:types",
-            "@test:unit"
+            "@test:refactor"
         ]
     }
 }

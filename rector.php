@@ -19,6 +19,6 @@ return RectorConfig::configure()
         typeDeclarations: true,
         privatization: true,
         earlyReturn: true,
-        strictBooleans: true,
+        codingStyle: true,
     )
     ->withPhpSets();

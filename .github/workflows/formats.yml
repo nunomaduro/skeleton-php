@@ -6,7 +6,6 @@ jobs:
   ci:
     runs-on: ubuntu-latest
 
-        php: [8.4]
     name: Formats P8.4 - ubuntu-latest
 
     steps:

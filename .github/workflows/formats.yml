@@ -4,26 +4,20 @@ on: ['push', 'pull_request']
 
 jobs:
   ci:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: true
-      matrix:
-        os: [ubuntu-latest]
         php: [8.4]
-        dependency-version: [prefer-lowest, prefer-stable]
-
-    name: Formats P${{ matrix.php }} - ${{ matrix.os }} - ${{ matrix.dependency-version }}
+    name: Formats P8.4 - ubuntu-latest
 
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
 
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: ${{ matrix.php }}
+        php-version: 8.4
         extensions: dom, mbstring, zip
         coverage: pcov
 
@@ -33,17 +27,26 @@ jobs:
       run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
     - name: Cache dependencies
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
-        key: dependencies-php-${{ matrix.php }}-os-${{ matrix.os }}-version-${{ matrix.dependency-version }}-composer-${{ hashFiles('composer.json') }}
-        restore-keys: dependencies-php-${{ matrix.php }}-os-${{ matrix.os }}-version-${{ matrix.dependency-version }}-composer-
+        key: dependencies-php-8.4-os-ubuntu-latest-composer-${{ hashFiles('composer.json') }}
+        restore-keys: dependencies-php-8.4-os-ubuntu-latest-composer-
 
     - name: Install Composer dependencies
-      run: composer update --${{ matrix.dependency-version }} --no-interaction --prefer-dist
+      run: composer update --prefer-stable --no-interaction --prefer-dist
 
     - name: Coding Style Checks
       run: composer test:lint
 
     - name: Type Checks
       run: composer test:types
+
+    - name: Type Coverage Checks
+      run: composer test:type-coverage
+
+    - name: Typo Checks
+      run: composer test:typos
+
+    - name: Refactor Checks
+      run: composer test:refactor

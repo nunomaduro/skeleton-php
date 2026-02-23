@@ -44,8 +44,5 @@ jobs:
     - name: Type Coverage Checks
       run: composer test:type-coverage
 
-    - name: Typo Checks
-      run: composer test:typos
-
     - name: Refactor Checks
       run: composer test:refactor

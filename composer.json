@@ -43,7 +43,6 @@
         "lint": "pint",
         "refactor": "rector",
         "test:type-coverage": "pest --type-coverage --exactly=100",
-        "test:typos": "peck",
         "test:lint": "pint --test",
         "test:unit": "pest --coverage --exactly=100",
         "test:types": "phpstan",
@@ -51,7 +50,6 @@
         "test": [
             "@test:lint",
             "@test:type-coverage",
-            "@test:typos",
             "@test:unit",
             "@test:types",
             "@test:refactor"

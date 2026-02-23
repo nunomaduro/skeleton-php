@@ -6,7 +6,7 @@ jobs:
   ci:
     runs-on: ubuntu-latest
 
-    name: Formats P8.4 - ubuntu-latest
+    name: Formats P8.5 - ubuntu-latest
 
     steps:
 
@@ -16,7 +16,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: 8.4
+        php-version: 8.5
         extensions: dom, mbstring, zip
         coverage: pcov
 
@@ -29,8 +29,8 @@ jobs:
       uses: actions/cache@v5
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
-        key: dependencies-php-8.4-os-ubuntu-latest-composer-${{ hashFiles('composer.json') }}
-        restore-keys: dependencies-php-8.4-os-ubuntu-latest-composer-
+        key: dependencies-php-8.5-os-ubuntu-latest-composer-${{ hashFiles('composer.json') }}
+        restore-keys: dependencies-php-8.5-os-ubuntu-latest-composer-
 
     - name: Install Composer dependencies
       run: composer update --prefer-stable --no-interaction --prefer-dist

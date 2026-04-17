@@ -54,7 +54,7 @@
         "test": [
             "@test:lint",
             "@test:types",
-            "@test:unit",
+            "@test:unit"
         ]
     }
 }

@@ -40,19 +40,21 @@
         }
     },
     "scripts": {
-        "lint": "pint",
-        "refactor": "rector",
-        "test:type-coverage": "pest --type-coverage --exactly=100",
-        "test:lint": "pint --test",
-        "test:unit": "pest --coverage --exactly=100",
+        "lint": [
+            "pint --parallel",
+            "rector"
+        ],
+        "test:type-coverage": "pest --type-coverage --min=100",
+        "test:lint": [
+            "pint --parallel --test",
+            "rector --dry-run"
+        ],
+        "test:unit": "pest --parallel --coverage --exactly=100",
         "test:types": "phpstan",
-        "test:refactor": "rector --dry-run",
         "test": [
             "@test:lint",
-            "@test:type-coverage",
-            "@test:unit",
             "@test:types",
-            "@test:refactor"
+            "@test:unit",
         ]
     }
 }

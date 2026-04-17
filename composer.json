@@ -16,9 +16,9 @@
         "laravel/pint": "^1.29.0",
         "pestphp/pest": "^5.0.0",
         "pestphp/pest-plugin-type-coverage": "^5.0.0",
-        "phpstan/phpstan": "^2.1.44",
-        "rector/rector": "^2.3.9",
-        "symfony/var-dumper": "^8.0.6"
+        "phpstan/phpstan": "^2.1.49",
+        "rector/rector": "^2.4.2",
+        "symfony/var-dumper": "^8.0.8"
     },
     "autoload": {
         "psr-4": {

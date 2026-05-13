@@ -2,6 +2,9 @@ name: Formats
 
 on: ['push', 'pull_request']
 
+permissions:
+  contents: read
+
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -11,10 +14,10 @@ jobs:
     steps:
 
     - name: Checkout
-      uses: actions/checkout@v6
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
     - name: Setup PHP
-      uses: shivammathur/setup-php@v2
+      uses: shivammathur/setup-php@accd6127cb78bee3e8082180cb391013d204ef9f # v2
       with:
         php-version: 8.5
         extensions: dom, mbstring, zip
@@ -26,7 +29,7 @@ jobs:
       run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
     - name: Cache dependencies
-      uses: actions/cache@v5
+      uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5
       with:
         path: ${{ steps.composer-cache.outputs.dir }}
         key: dependencies-php-8.5-os-ubuntu-latest-composer-${{ hashFiles('composer.json') }}

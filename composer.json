@@ -13,12 +13,14 @@
         "php": "^8.5.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.29.1",
+        "laravel/pint": "^1.29.3",
         "pestphp/pest": "^5.0.0",
+        "pestphp/pest-plugin-phpstan": "^5.0.0",
+        "pestphp/pest-plugin-rector": "^5.0.0",
         "pestphp/pest-plugin-type-coverage": "^5.0.0",
-        "phpstan/phpstan": "^2.1.54",
-        "rector/rector": "^2.4.2",
-        "symfony/var-dumper": "^8.0.8"
+        "phpstan/phpstan": "^2.2.5",
+        "rector/rector": "^2.5.7",
+        "symfony/var-dumper": "^8.1.1"
     },
     "autoload": {
         "psr-4": {

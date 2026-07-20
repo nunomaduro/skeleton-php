@@ -23,7 +23,6 @@ return RectorConfig::configure()
         codingStyle: true,
     )
     ->withSets([
-        PestSetList::PEST_CODE_QUALITY,
-        PestSetList::PEST_CHAIN,
+        PestSetList::CODING_STYLE,
     ])
     ->withPhpSets();
